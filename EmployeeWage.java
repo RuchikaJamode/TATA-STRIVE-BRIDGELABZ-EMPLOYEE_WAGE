@@ -93,32 +93,55 @@ public static void uc4() {
     }
 
 public static void uc6() {
-    int fullTimeHours = 8;
-    int partTimeHours = 4;
-    int fullTimeWagePerHour = 20;
-    int partTimeWagePerHour = 10;
-    int totalWorkingHours = 100;
-    int totalWorkingDays = 20;
+	{
+	    int fullTimeHours = 8;
+	    int partTimeHours = 4;
+	    int fullTimeWagePerHour = 20;
+	    int partTimeWagePerHour = 10;
+	    int totalWorkingHours = 100;
+	    int totalWorkingDays = 20;
+	
+	    int currentHours = 0;
+	    int currentDays = 0;
+	    int totalWage = 0;
+	
+	    // Loop to calculate wages until conditions are met
+	    while (currentHours < totalWorkingHours && currentDays < totalWorkingDays) {
+	        currentHours += fullTimeHours;
+	        currentDays++;
+	
+	        // Calculate wages for full-time employee
+	        totalWage += fullTimeWagePerHour * fullTimeHours;
+	    }
+	
+	    System.out.println("Total Working Days: " + currentDays);
+	    System.out.println("Total Working Hours: " + currentHours);
+	    System.out.println("Total Wage till condition met: " + totalWage);
+	
+	    
+	main emp1=new main();
+	emp1.computeWage();
+	}
 
-    int currentHours = 0;
-    int currentDays = 0;
-    int totalWage = 0;
 
-    // Loop to calculate wages until conditions are met
-    while (currentHours < totalWorkingHours && currentDays < totalWorkingDays) {
-        currentHours += fullTimeHours;
-        currentDays++;
+int totalWageCompany1 = computeWage(1, 20, 100); // Company 1
+System.out.println("Total wage for Company 1: " + totalWageCompany1);
 
-        // Calculate wages for full-time employee
-        totalWage += fullTimeWagePerHour * fullTimeHours;
-    }
+int totalWageCompany2 = computeWage(2, 22, 110); // Company 2
+System.out.println("Total wage for Company 2: " + totalWageCompany2);
 
-    System.out.println("Total Working Days: " + currentDays);
-    System.out.println("Total Working Hours: " + currentHours);
-    System.out.println("Total Wage till condition met: " + totalWage);
+int totalWageInvalidCompany = computeWage(3, 20, 100); // Invalid Company
+System.out.println("Total wage for Invalid Company: " + totalWageInvalidCompany);
 }
-{
-main emp1=new main();
-emp1.computeWage();
+
+
+private static int computeWage(int i, int j, int k) {
+	// TODO Auto-generated method stub
+	return 0;
 }
 }
+
+
+	
+	
+
