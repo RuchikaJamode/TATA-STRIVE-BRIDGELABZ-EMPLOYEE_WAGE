@@ -117,5 +117,8 @@ public static void uc6() {
     System.out.println("Total Working Hours: " + currentHours);
     System.out.println("Total Wage till condition met: " + totalWage);
 }
+{
+main emp1=new main();
+emp1.computeWage();
 }
-
+}
