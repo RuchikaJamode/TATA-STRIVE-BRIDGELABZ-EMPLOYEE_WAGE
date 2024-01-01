@@ -10,6 +10,7 @@ uc1();
 uc2();
 uc3();
 uc4();
+uc5() ;
 	}
 
 
@@ -74,5 +75,21 @@ public static void uc4() {
             System.out.println("Invalid Employee Type");
     }
 }
+    public static void uc5() {
+        int fullTimeHours = 8;
+        int partTimeHours = 4;
+        int fullTimeWagePerHour = 20;
+        int partTimeWagePerHour = 10;
+        int workingDaysPerMonth = 20;
+
+        // Calculate monthly wages for full-time employee
+        int fullTimeMonthlyWage = fullTimeWagePerHour * fullTimeHours * workingDaysPerMonth;
+        System.out.println("Monthly Wage for Full-Time Employee: " + fullTimeMonthlyWage);
+
+        // Calculate monthly wages for part-time employee
+        int partTimeMonthlyWage = partTimeWagePerHour * partTimeHours * workingDaysPerMonth;
+        System.out.println("Monthly Wage for Part-Time Employee: " + partTimeMonthlyWage);
+    }
 }
+
 
