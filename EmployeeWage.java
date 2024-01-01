@@ -11,6 +11,7 @@ uc2();
 uc3();
 uc4();
 uc5() ;
+uc6();
 	}
 
 
@@ -90,6 +91,31 @@ public static void uc4() {
         int partTimeMonthlyWage = partTimeWagePerHour * partTimeHours * workingDaysPerMonth;
         System.out.println("Monthly Wage for Part-Time Employee: " + partTimeMonthlyWage);
     }
-}
 
+public static void uc6() {
+    int fullTimeHours = 8;
+    int partTimeHours = 4;
+    int fullTimeWagePerHour = 20;
+    int partTimeWagePerHour = 10;
+    int totalWorkingHours = 100;
+    int totalWorkingDays = 20;
+
+    int currentHours = 0;
+    int currentDays = 0;
+    int totalWage = 0;
+
+    // Loop to calculate wages until conditions are met
+    while (currentHours < totalWorkingHours && currentDays < totalWorkingDays) {
+        currentHours += fullTimeHours;
+        currentDays++;
+
+        // Calculate wages for full-time employee
+        totalWage += fullTimeWagePerHour * fullTimeHours;
+    }
+
+    System.out.println("Total Working Days: " + currentDays);
+    System.out.println("Total Working Hours: " + currentHours);
+    System.out.println("Total Wage till condition met: " + totalWage);
+}
+}
 
