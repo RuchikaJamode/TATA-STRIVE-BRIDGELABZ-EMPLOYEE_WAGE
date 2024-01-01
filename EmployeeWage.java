@@ -9,6 +9,7 @@ System.out.println("welcome to employeewage computational program");
 uc1();
 uc2();
 uc3();
+uc4();
 	}
 
 
@@ -49,6 +50,29 @@ public static void uc3() {
     // Display the daily wages for full-time and part-time employees
     System.out.println("Full-time Employee Daily Wage: " + fullTimeWage);
     System.out.println("Part-time Employee Daily Wage: " + partTimeWage);
+}
+public static void uc4() {
+    int fullTimeHours = 8;
+    int partTimeHours = 4;
+    int fullTimeWagePerHour = 20;
+    int partTimeWagePerHour = 10;
+
+    int employeeType = 1; // 1 for full-time, 2 for part-time
+
+    switch (employeeType) {
+        case 1:
+            // Calculate full-time employee wage
+            int fullTimeWage = fullTimeWagePerHour * fullTimeHours;
+            System.out.println("Full-Time Employee Wage: " + fullTimeWage);
+            break;
+        case 2:
+            // Calculate part-time employee wage
+            int partTimeWage = partTimeWagePerHour * partTimeHours;
+            System.out.println("Part-Time Employee Wage: " + partTimeWage);
+            break;
+        default:
+            System.out.println("Invalid Employee Type");
+    }
 }
 }
 
